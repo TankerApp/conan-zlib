@@ -6,7 +6,7 @@ class ZlibConan(NxConanFile):
     name = "zlib"
     version = "1.2.11"
     license = ""
-    url = "https://github.com/hoxnox/conan-zlib"
+    url = "https://github.com/TankerApp/conan-zlib"
     license = "http://zlib.net/zlib_license.html"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared":[True, False]}
@@ -35,5 +35,5 @@ class ZlibConan(NxConanFile):
         if self.settings.compiler == "Visual Studio":
             self.cpp_info.libs = ["zlib"] if self.options.shared else ["zlibstatic"]
         else:
-            self.cpp_info.libs = ["z"] if self.options.shared else ["z.a"]
+            self.cpp_info.libs = ["z"]
 
