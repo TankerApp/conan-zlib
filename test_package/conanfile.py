@@ -1,8 +1,8 @@
 from conans import ConanFile, CMake
 import os
 
-channel = os.getenv("CONAN_CHANNEL", "testing")
-username = os.getenv("CONAN_USERNAME", "hoxnox")
+channel = os.getenv("CONAN_CHANNEL", "stable")
+username = os.getenv("CONAN_USERNAME", "tanker")
 
 class SnappyTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
